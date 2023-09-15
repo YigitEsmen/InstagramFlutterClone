@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'navigation/route_generator.dart';
+
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -10,11 +12,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Instagram Flutter Clone',
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(
-          child: Text('Hi there! 👋'),
-        ),
-      ),
+      onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
 }
